@@ -11,7 +11,12 @@ News Collector
 </script>
 </head>
 <body>
-<h2 id="buttonPrompt">Please choose what type of news you would like</h2>
+<h2 id="buttonPrompt">Please choose what type of news you would like</h2><br>
+<p id="instructions">Click on a button to display a set of new stories for the related topic.</p>
+<div id="buttons">
+	<button id="generalNews" type ="button" onclick="getNews()">News</button>
+	<button id="sports" type ="button" onclick="getSports()">Sports</button>
+	<button id="foreignNews" type ="button" onclick="getForeign()">Foreign News</button>
 <script>
 var key = "4814bbc522ee4216bdd9eebdf7c72b5f"
 </script>
