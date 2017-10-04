@@ -13,12 +13,11 @@ News Collector
 </head>
 <body>
 <h2 id="buttonPrompt">Please choose what type of news you would like</h2><br>
-<p id="instructions">Click on a button to display a set of new stories for the related topic.</p>
 <div id="buttons">
 	<button id="generalNews" type ="button" onclick="getNews()">News</button>
 	<button id="sports" type ="button" onclick="getSports()">Sports</button>
 	<button id="foreignNews" type ="button" onclick="getForeign()">Foreign News</button>
-	<button id="horoscope" type="button" onclick="getHoroscope()">Horoscope</button> <p>Search powered by Newsapi.org</p>
+	<button id="horoscope" type="button" onclick="getHoroscope()">Horoscope</button> <p id="source">Search powered by Newsapi.org</p>
 <div id="zodiac" hidden>Please enter your zodiac sign<input type="text"/></div>
 <h2>Here is what we found for your search</h2>
 <h3 id="source1"></h3>
@@ -173,7 +172,7 @@ $.ajax({
 });
 
 }
-function getHoroscope {
+function getHoroscope() {
 $("zodiac").show();
 var t = document.getElementById("zodiac").value;
 if (t == "Aquarius") { $("#results1").html("Test");
@@ -189,6 +188,8 @@ if (t == "Aquarius") { $("#results1").html("Test");
 }else if (t== "Pisces") { $("#results1").html();
 }else if (t== "Pisces") { $("#results1").html();
 }else {$("#results1").html("That is not a valid horoscope");
+}
+}
 </script>
 </body>
 </html
