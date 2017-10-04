@@ -2,4 +2,25 @@ h1
 {
 	text-align: center;
 	background-color:lightblue;
+	font-family:Verdana;
 }
+#generalNews
+{
+	background-color: #4CAF50;
+}
+#sports
+{
+	background-color: #008CBA;
+}
+#foreignNews
+{
+	background-color: #f44336;
+}
+#horoscope
+{
+	background-color: #e7e7e7;
+}
+ul
+{
+	border-style: double;
+]
