@@ -18,18 +18,51 @@ News Collector
 	<button id="sports" type ="button" onclick="getSports()">Sports</button>
 	<button id="foreignNews" type ="button" onclick="getForeign()">Foreign News</button> <p>Search powered by Newsapi.org</p>
 <h2>Here is what we found for your search</h2>
-<div id="results"></div>
+<h3 id="source1"></h3>
+<div id="results1"></div>
+<h3 id="source2"></h3>
+<div id="results2"></div>
+<div id="source3"></h3>
+<div id="results3"></div>
 <script>
 var url = "https://newsapi.org/v1/articles?source="
 var key = "&apikeuy=4814bbc522ee4216bdd9eebdf7c72b5f"
 function getNews()
 {
+var sourceOne ="cnn";
+var sourceTwo ="newsweek";
+var sourceThree="the-washington-post";
+var url1 = url+sourceOne+key;
+var url2 = url+sourceTwo+key;
+var url3 = url+sourceThree+key;
+$.ajax({
+	url:url1,
+	dataType: "json",
+	success : function(rawData)
+	{
+		console.log(rawData)
+		var parsed_json=rawData.articles;
+});
 }
 function getSports()
 {
+var sourceOne ="bbc-sport";
+var sourceTwo="nfl-news";
+var sourceThree="fox-sports";
+var url1 = url+sourceOne+key;
+var url2 = url+sourceTwo+key;
+var url3 = url+sourceThree+key;
+
 }
 function getForeign()
 {
+var sourceOne ="the-times-of-india";
+var sourceTwo="der-tagesspiegel";
+var sourceThree="the-guardian-au";
+var url1 = url+sourceOne+key;
+var url2 = url+sourceTwo+key;
+var url3 = url+sourceThree+key;
+
 }
 </script>
 </body>
