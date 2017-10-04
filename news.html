@@ -29,39 +29,145 @@ var url = "https://newsapi.org/v1/articles?source="
 var key = "&apikeuy=4814bbc522ee4216bdd9eebdf7c72b5f"
 function getNews()
 {
-var sourceOne ="cnn";
-var sourceTwo ="newsweek";
-var sourceThree="the-washington-post";
+var sourceOne ="CNN";
+var sourceTwo ="Newsweek";
+var sourceThree="The-Washington-Post";
 var url1 = url+sourceOne+key;
-var url2 = url+sourceTwo+key;
-var url3 = url+sourceThree+key;
+var url2 = "https://newsapi.org/v1/articles?source=newsweek&sortBy=top&apiKey=4814bbc522ee4216bdd9eebdf7c72b5f"
+var url3 = "https://newsapi.org/v1/articles?source=the-washington-post&sortBy=top&apiKey=4814bbc522ee4216bdd9eebdf7c72b5f"
+var urlTest =  "https://newsapi.org/v1/articles?source=cnn&apiKey=4814bbc522ee4216bdd9eebdf7c72b5f"
 $.ajax({
-	url:url1,
+	url:urlTest,
 	dataType: "json",
 	success : function(rawData)
 	{
 		console.log(rawData)
 		var parsed_json=rawData.articles;
+		var everything1 ="<ul>"
+		for( var i =0; i<parsed_json.length;i++)
+		{
+			everything1+='<li> <a href="'+parsed_json[i].url+'">';
+			everything1+= parsed_json[i].title+"</a></li>";
+		}
+		everything1+="</ul>"
+		$("#source1").html(sourceOne);
+		$("#results1").html(everything1);
+	}
+});
+
+$.ajax({
+        url:url2,
+        dataType: "json",
+        success : function(rawData)
+        {
+                console.log(rawData)
+                var parsed_json=rawData.articles;
+                var everything1 ="<ul>"
+                for( var i =0; i<parsed_json.length;i++)
+                {
+                        everything1+='<li> <a href="'+parsed_json[i].url+'">';
+                        everything1+= parsed_json[i].title+"</a></li>";
+                }
+                everything1+="</ul>"
+                $("#source2").html(sourceTwo);
+                $("#results2").html(everything1);
+        }
 });
 }
 function getSports()
 {
-var sourceOne ="bbc-sport";
-var sourceTwo="nfl-news";
-var sourceThree="fox-sports";
-var url1 = url+sourceOne+key;
-var url2 = url+sourceTwo+key;
-var url3 = url+sourceThree+key;
+var sourceOne ="BBC-sport";
+var sourceTwo="NFL-news";
+var sourceThree="ESPN";
+var url1 = "https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=4814bbc522ee4216bdd9eebdf7c72b5f"
+var url2 = "https://newsapi.org/v1/articles?source=nfl-news&sortBy=top&apiKey=4814bbc522ee4216bdd9eebdf7c72b5f";
+var url3 = "https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=4814bbc522ee4216bdd9eebdf7c72b5f";
+
+$.ajax({
+        url:url1,
+        dataType: "json",
+        success : function(rawData)
+        {
+                console.log(rawData)
+                var parsed_json=rawData.articles;
+                var everything1 ="<ul>"
+                for( var i =0; i<parsed_json.length;i++)
+                {
+                        everything1+='<li> <a href="'+parsed_json[i].url+'">';
+                        everything1+= parsed_json[i].title+"</a></li>";
+                }
+                everything1+="</ul>"
+                $("#source1").html(sourceOne);
+                $("#results1").html(everything1);
+        }
+});
+
+$.ajax({
+        url:url2,
+        dataType: "json",
+        success : function(rawData)
+        {
+                console.log(rawData)
+                var parsed_json=rawData.articles;
+                var everything1 ="<ul>"
+                for( var i =0; i<parsed_json.length;i++)
+                {
+                        everything1+='<li> <a href="'+parsed_json[i].url+'">';
+                        everything1+= parsed_json[i].title+"</a></li>";
+                }
+                everything1+="</ul>"
+                $("#source2").html(sourceTwo);
+                $("#results2").html(everything1);
+        }
+});
 
 }
 function getForeign()
 {
-var sourceOne ="the-times-of-india";
-var sourceTwo="der-tagesspiegel";
+var sourceOne ="The-Times-of-India";
+var sourceTwo="Der-Tagesspiegel";
 var sourceThree="the-guardian-au";
-var url1 = url+sourceOne+key;
-var url2 = url+sourceTwo+key;
+var url1 = "https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=top&apiKey=4814bbc522ee4216bdd9eebdf7c72b5f";
+var url2 = "https://newsapi.org/v1/articles?source=der-tagesspiegel&sortBy=latest&apiKey=4814bbc522ee4216bdd9eebdf7c72b5f";
 var url3 = url+sourceThree+key;
+
+$.ajax({
+        url:url1,
+        dataType: "json",
+        success : function(rawData)
+        {
+                console.log(rawData)
+                var parsed_json=rawData.articles;
+                var everything1 ="<ul>"
+                for( var i =0; i<parsed_json.length;i++)
+                {
+                        everything1+='<li> <a href="'+parsed_json[i].url+'">';
+                        everything1+= parsed_json[i].title+"</a></li>";
+                }
+                everything1+="</ul>"
+                $("#source1").html(sourceOne);
+                $("#results1").html(everything1);
+        }
+});
+
+$.ajax({
+        url:url2,
+        dataType: "json",
+        success : function(rawData)
+        {
+                console.log(rawData)
+                var parsed_json=rawData.articles;
+                var everything1 ="<ul>"
+                for( var i =0; i<parsed_json.length;i++)
+                {
+                        everything1+='<li> <a href="'+parsed_json[i].url+'">';
+                        everything1+= parsed_json[i].title+"</a></li>";
+                }
+                everything1+="</ul>"
+                $("#source2").html(sourceTwo);
+                $("#results2").html(everything1);
+        }
+});
 
 }
 </script>
