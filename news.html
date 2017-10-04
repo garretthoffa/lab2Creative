@@ -174,7 +174,7 @@ $.ajax({
 }
 
 function showHoroscope() {
-var zod='<div id="zodiac">Please enter your zodiac sign<input type="text"/><input type="submit" onclick="getHoroscope()"/></div>';
+var zod='<div id="zodiac">Please enter your zodiac sign<input id ="textBox"type="text"/><button  id="submit1" type ="button" onclick="getHoroscope()">Submit</button></div>';
 $("#zodiac").html(zod);
 //$("#zodiac").removeAttr(hidden);
 }
@@ -185,7 +185,8 @@ $("#source1").html(x);
 var y ="";
 $("#source2").html(y);
 $("#results2").html(y);
-var t = document.getElementById("zodiac").value;
+var t = document.getElementById("textBox").value;
+console.log(t);
 if (t == "Aquarius") { $("#results1").html("Test");
 }else if (t== "Pisces") { $("#results1").html();
 }else if (t== "Pisces") { $("#results1").html();
