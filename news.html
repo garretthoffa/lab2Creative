@@ -18,7 +18,7 @@ News Collector
 	<button id="sports" type ="button" onclick="getSports()">Sports</button>
 	<button id="foreignNews" type ="button" onclick="getForeign()">Foreign News</button>
 	<button id="horoscope" type="button" onclick="showHoroscope()">Horoscope</button> <p id="source">Search powered by Newsapi.org</p>
-<div id="zodiac" hidden>Please enter your zodiac sign<input type="text"/><input type="submit" onclick="getHoroscope()"/></div>
+<div id="zodiac"></div></div>
 <h2>Here is what we found for your search</h2>
 <h3 id="source1"></h3>
 <div id="results1"></div>
@@ -174,7 +174,9 @@ $.ajax({
 }
 
 function showHoroscope() {
-$("zodiac").show();
+var zod='<div id="zodiac">Please enter your zodiac sign<input type="text"/><input type="submit" onclick="getHoroscope()"/></div>';
+$("#zodiac").html(zod);
+//$("#zodiac").removeAttr(hidden);
 }
 
 function getHoroscope() {
