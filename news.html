@@ -174,7 +174,7 @@ $.ajax({
 }
 
 function showHoroscope() {
-var zod='<div id="zodiac">Please enter your zodiac sign<input id ="textBox"type="text"/><button  id="submit1" type ="button" onclick="getHoroscope()">Submit</button></div>';
+var zod='<div id="zodiac">Please enter your zodiac sign in all lowercase<input id ="textBox"type="text"/><button  id="submit1" type ="button" onclick="getHoroscope()">Submit</button></div>';
 $("#zodiac").html(zod);
 //$("#zodiac").removeAttr(hidden);
 }
@@ -187,19 +187,19 @@ $("#source2").html(y);
 $("#results2").html(y);
 var t = document.getElementById("textBox").value;
 console.log(t);
-if (t == "Aquarius") { $("#results1").html("Test");
-}else if (t== "Pisces") { $("#results1").html();
-}else if (t== "Pisces") { $("#results1").html();
-}else if (t== "Pisces") { $("#results1").html();
-}else if (t== "Pisces") { $("#results1").html();
-}else if (t== "Pisces") { $("#results1").html();
-}else if (t== "Pisces") { $("#results1").html();
-}else if (t== "Pisces") { $("#results1").html();
-}else if (t== "Pisces") { $("#results1").html();
-}else if (t== "Pisces") { $("#results1").html();
-}else if (t== "Pisces") { $("#results1").html();
-}else if (t== "Pisces") { $("#results1").html();
-}else {$("#results1").html("That is not a valid horoscope");
+if (t == "aquarius") { $("#results1").html("Beware majors that have a ridiculous number of acronyms");
+}else if (t== "pisces") { $("#results1").html("If a shell was handy with scripture references, would it be a Bible Bash?");
+}else if (t== "aries") { $("#results1").html("Beware majors in which your eternal salvation hinges on whether you use Apple or Android");
+}else if (t== "taurus") { $("#results1").html("Would a computer owned by a person in a coniferous forest be an pineApple?");
+}else if (t== "gemini") { $("#results1").html("Beware majors in which the only difference between living and dying is one semicolon");
+}else if (t== "cancer") { $("#results1").html("If a medieval siege weapon could remember all the doors it had knocked down, would it have lots of battering RAM?");
+}else if (t== "leo") { $("#results1").html("Beware majors in which you're confused when your code doesn't work and even more confused when it does");
+}else if (t== "virgo") { $("#results1").html("If Frodo Baggins got married and had 8 children, would they be Hobbytes?");
+}else if (t== "libra") { $("#results1").html("Beware majors in which cookies are a bad thing");
+}else if (t== "scorpio") { $("#results1").html("If a computer programmer wrote a classical composition using music software, would he call it the Sonata in C++ minor?");
+}else if (t== "sagittarius") { $("#results1").html();
+}else if (t== "capricorn") { $("#results1").html();
+}else {$("#results1").html("That is not a valid zodiac sign");
 }
 }
 </script>
